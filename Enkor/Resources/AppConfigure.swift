@@ -20,7 +20,7 @@ class AppConfigure {
     }()
     
     lazy private(set) var buildPhase = { [weak self] in
-        return BuildPhase(rawValue: self?.infoForKey("BUILD_PHASE") ?? "")
+        return BuildPhase(rawValue: self?.infoForKey("BUILD_PHASE") ?? "WEIRD")
     }()
     
     lazy private(set) var baseURL = { [weak self] in

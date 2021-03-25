@@ -35,7 +35,6 @@ class ProductViewController: ReactiveViewController, ErrorDisplayable {
     
     let productViewModel = ProductViewModel(apiClient: ProductAPI(provider: nil))
     var categories = ["FoodDelivery", "MealBox", "Necessity", "Cosmetic"]
-    let categoryColors = [UIColor.systemBlue, UIColor.systemRed, UIColor.systemGreen, UIColor.systemGray]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +46,7 @@ class ProductViewController: ReactiveViewController, ErrorDisplayable {
         categoryCollectionView.register(CategoryCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        self.navigationItem.title = "Enkor Market"
         
         bind()
     }
@@ -85,7 +85,7 @@ extension ProductViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.categoryItemCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryItemCollectionViewCell", for: indexPath) as! CategoryItemCollectionViewCell
-            cell.configure(categoryName: categories[indexPath.item], color: categoryColors[indexPath.item])
+            cell.configure(categoryName: categories[indexPath.item])
             
             return cell
         } else {
@@ -113,7 +113,8 @@ extension ProductViewController: UICollectionViewDelegateFlowLayout {
 extension ProductViewController: UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.pointee.x / view.frame.width
-        
+        let indexPath = IndexPath(item: Int(index), section: 0)
+        self.categoryItemCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .init())
         self.categoryLabel.text = categories[Int(index)]
     }
 }

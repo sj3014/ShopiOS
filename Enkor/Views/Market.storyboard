@@ -130,6 +130,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapAddToCart:" destination="6cY-de-NGN" eventType="touchUpInside" id="Jkd-45-jOO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hQ-hy-4oX" userLabel="Buy Now">
                                                 <rect key="frame" x="202" y="0.0" width="192" height="60"/>
@@ -143,6 +146,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapBuyNow:" destination="6cY-de-NGN" eventType="touchUpInside" id="1oX-Mp-JwR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -194,22 +200,56 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select option" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gak-YM-klH" userLabel="Option">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekd-Iu-e5m">
                                                 <rect key="frame" x="20" y="524" width="374" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="V2b-l8-XBI"/>
+                                                    <constraint firstAttribute="height" constant="50" id="6yc-MK-QGC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSw-k9-lPh">
+                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Select option">
+                                                    <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemGray3Color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapSelectOption:" destination="6cY-de-NGN" eventType="touchUpInside" id="gJH-Kn-Sec"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34E-IZ-cgI">
                                                 <rect key="frame" x="20" y="584" width="374" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="ol1-Pe-qLm"/>
+                                                    <constraint firstAttribute="height" constant="50" id="hcP-b9-iEP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Quantity">
+                                                    <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemGray3Color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapSelectQuantity:" destination="6cY-de-NGN" eventType="touchUpInside" id="czJ-bo-UVK"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product $ 10.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzd-Uf-9Bb" userLabel="Price">
                                                 <rect key="frame" x="20" y="654" width="374" height="50"/>
                                                 <constraints>
@@ -286,29 +326,30 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="ekd-Iu-e5m" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="304-O6-2rq"/>
+                                            <constraint firstItem="34E-IZ-cgI" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="3lP-xC-uPR"/>
                                             <constraint firstItem="oKr-Gp-lB6" firstAttribute="top" secondItem="OZg-0Z-mdD" secondAttribute="bottom" constant="30" id="3lm-5p-HyB"/>
-                                            <constraint firstAttribute="trailing" secondItem="Gak-YM-klH" secondAttribute="trailing" constant="20" id="7S8-Vi-kcN"/>
+                                            <constraint firstItem="ekd-Iu-e5m" firstAttribute="top" secondItem="oKr-Gp-lB6" secondAttribute="bottom" constant="20" id="6J9-BW-HBg"/>
                                             <constraint firstAttribute="trailing" secondItem="cz4-Ey-Eh6" secondAttribute="trailing" id="9Ne-HK-YwW"/>
                                             <constraint firstAttribute="trailing" secondItem="81D-fG-YFM" secondAttribute="trailing" constant="20" id="BfA-42-56q"/>
+                                            <constraint firstItem="34E-IZ-cgI" firstAttribute="top" secondItem="ekd-Iu-e5m" secondAttribute="bottom" constant="10" id="Ck2-2l-3cs"/>
+                                            <constraint firstItem="Bzd-Uf-9Bb" firstAttribute="top" secondItem="34E-IZ-cgI" secondAttribute="bottom" constant="20" id="G9R-aQ-h0U"/>
+                                            <constraint firstAttribute="trailing" secondItem="34E-IZ-cgI" secondAttribute="trailing" constant="20" id="JKk-dn-CWH"/>
                                             <constraint firstAttribute="trailing" secondItem="Bzd-Uf-9Bb" secondAttribute="trailing" constant="20" id="KxF-8w-pMj"/>
                                             <constraint firstItem="s6b-kK-zdM" firstAttribute="top" secondItem="Bzd-Uf-9Bb" secondAttribute="bottom" id="Lih-3J-bgp"/>
                                             <constraint firstAttribute="trailing" secondItem="sLF-wM-T2h" secondAttribute="trailing" constant="20" id="Mvh-Yr-wCR"/>
                                             <constraint firstItem="sLF-wM-T2h" firstAttribute="top" secondItem="81D-fG-YFM" secondAttribute="bottom" constant="80" id="NvS-Je-yn1"/>
                                             <constraint firstItem="fPw-8X-3Ni" firstAttribute="top" secondItem="cz4-Ey-Eh6" secondAttribute="bottom" constant="20" id="O5x-xL-oQn"/>
-                                            <constraint firstItem="Gak-YM-klH" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="P2a-BB-Ykw"/>
-                                            <constraint firstItem="zSw-k9-lPh" firstAttribute="top" secondItem="Gak-YM-klH" secondAttribute="bottom" constant="10" id="UtE-Uf-1Q6"/>
                                             <constraint firstItem="s6b-kK-zdM" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="VLX-tr-W5D"/>
                                             <constraint firstAttribute="trailing" secondItem="oKr-Gp-lB6" secondAttribute="trailing" constant="20" id="a3g-ZK-QH2"/>
                                             <constraint firstItem="81D-fG-YFM" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="bIW-qt-K7k"/>
                                             <constraint firstItem="sLF-wM-T2h" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="cUo-jT-p8r"/>
-                                            <constraint firstAttribute="trailing" secondItem="zSw-k9-lPh" secondAttribute="trailing" constant="20" id="gyx-fc-p3O"/>
+                                            <constraint firstAttribute="trailing" secondItem="ekd-Iu-e5m" secondAttribute="trailing" constant="20" id="efN-fO-DiD"/>
                                             <constraint firstAttribute="bottom" secondItem="f6U-u9-tBr" secondAttribute="bottom" id="ha3-0H-UP9"/>
-                                            <constraint firstItem="Gak-YM-klH" firstAttribute="top" secondItem="oKr-Gp-lB6" secondAttribute="bottom" constant="20" id="jMI-OQ-7CU"/>
                                             <constraint firstAttribute="trailing" secondItem="OZg-0Z-mdD" secondAttribute="trailing" id="kT0-V6-7gF"/>
                                             <constraint firstItem="OZg-0Z-mdD" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" id="mgV-yX-WLF"/>
                                             <constraint firstItem="fPw-8X-3Ni" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="oNt-8i-trB"/>
                                             <constraint firstItem="f6U-u9-tBr" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" id="ofs-B7-4Bc"/>
-                                            <constraint firstItem="zSw-k9-lPh" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="p3K-pT-UeO"/>
                                             <constraint firstAttribute="trailing" secondItem="f6U-u9-tBr" secondAttribute="trailing" id="qq6-Ly-erX"/>
                                             <constraint firstAttribute="trailing" secondItem="s6b-kK-zdM" secondAttribute="trailing" constant="20" id="rba-n1-zrQ"/>
                                             <constraint firstItem="OZg-0Z-mdD" firstAttribute="top" secondItem="9cz-Nn-x4E" secondAttribute="top" id="rm8-WN-sFt"/>
@@ -318,7 +359,6 @@
                                             <constraint firstItem="cz4-Ey-Eh6" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" id="uff-fa-Jeu"/>
                                             <constraint firstItem="f6U-u9-tBr" firstAttribute="top" secondItem="fPw-8X-3Ni" secondAttribute="bottom" constant="10" id="vzh-vv-6ri"/>
                                             <constraint firstItem="cz4-Ey-Eh6" firstAttribute="top" secondItem="sLF-wM-T2h" secondAttribute="bottom" constant="20" id="yqX-dd-awl"/>
-                                            <constraint firstItem="Bzd-Uf-9Bb" firstAttribute="top" secondItem="zSw-k9-lPh" secondAttribute="bottom" constant="20" id="zdj-Tf-IhC"/>
                                             <constraint firstItem="oKr-Gp-lB6" firstAttribute="leading" secondItem="9cz-Nn-x4E" secondAttribute="leading" constant="20" id="zyX-sV-YkY"/>
                                         </constraints>
                                     </view>
@@ -348,12 +388,12 @@
                     </view>
                     <size key="freeformSize" width="414" height="2200"/>
                     <connections>
-                        <outlet property="orderQuantity" destination="zSw-k9-lPh" id="El1-de-f6C"/>
+                        <outlet property="orderQuantity" destination="34E-IZ-cgI" id="Fnd-b2-J3l"/>
                         <outlet property="price" destination="Bzd-Uf-9Bb" id="s4P-gV-zkp"/>
                         <outlet property="productDescription" destination="81D-fG-YFM" id="mdq-YW-ImF"/>
                         <outlet property="productImageCollectionView" destination="OZg-0Z-mdD" id="Q2b-rj-PV0"/>
                         <outlet property="productName" destination="oKr-Gp-lB6" id="f9L-x2-v3l"/>
-                        <outlet property="productOption" destination="Gak-YM-klH" id="3Du-iV-Dm3"/>
+                        <outlet property="productOption" destination="ekd-Iu-e5m" id="I8A-hy-aUP"/>
                         <outlet property="shippingFee" destination="s6b-kK-zdM" id="4JD-c0-xMg"/>
                         <outlet property="suggestedCollectionView" destination="cz4-Ey-Eh6" id="Ex0-dh-sdi"/>
                     </connections>
@@ -372,6 +412,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

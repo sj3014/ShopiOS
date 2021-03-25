@@ -11,18 +11,17 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if (AppConfigure.shared.buildPhase?.rawValue == "Debug") {
+            self.navigationItem.title = "Enkor Development"
+        } else {
+            self.navigationItem.title = "Enkor"
+        }
     }
     
     
     @IBAction func tapFoodDelivery(_ sender: Any) {
         let vc = Storyboard.Market.create(withIdentifier: "Market")
-//        vc.modalPresentationStyle = .fullScreen
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.type = CATransitionType
-//        self.show(vc, sender: self)
         navigationController?.pushViewController(vc, animated: true)
     }
     

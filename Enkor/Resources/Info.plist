@@ -55,6 +55,8 @@
 	</array>
 	<key>BASE_URL</key>
 	<string>${BASE_URL}</string>
+	<key>BUILD_PHASE</key>
+	<string>${BUILD_PHASE}</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

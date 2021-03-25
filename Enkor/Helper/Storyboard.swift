@@ -10,9 +10,10 @@ import UIKit
 enum Storyboard: String {
     case MyPage = "MyPage"
     case Home = "Home"
-    
+    case Cart = "Cart"
     case Auth = "Auth"
     case Market = "Market"
+    case Order = "Order"
     
     var instance: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)

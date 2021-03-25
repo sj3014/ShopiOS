@@ -12,6 +12,8 @@ target 'Enkor' do
   pod 'SwiftyJSON', '~> 5.0.0'
   pod 'SwiftKeychainWrapper', '~> 4.0.1'
   pod 'Kingfisher', '~> 6.0'
+  pod 'DropDown', '~> 2.3.13'
+  pod 'Paypal-iOS-SDK', '~> 2.18.1'
 
 
   target 'EnkorTests' do

@@ -24,9 +24,20 @@ class CategoryItemCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configure(categoryName: String, color: UIColor) {
+    override var isHighlighted: Bool {
+        didSet {
+            categoryName.textColor = isHighlighted ? UIColor.black : UIColor.lightGray
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            categoryName.textColor = isSelected ? UIColor.black : UIColor.lightGray
+        }
+    }
+    
+    func configure(categoryName: String) {
         self.categoryName.text = categoryName
-        self.backView.backgroundColor = color
     }
 
 }

@@ -19,6 +19,13 @@
 		B310109A260A70110001ADA3 /* ProductDetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3101098260A70110001ADA3 /* ProductDetailImageCollectionViewCell.xib */; };
 		B31010A0260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310109E260A70330001ADA3 /* ProductDetailSuggestedCollectionViewCell.swift */; };
 		B31010A1260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B310109F260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.xib */; };
+		B31010B5260CC3E40001ADA3 /* UserDefaultsCartStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31010B4260CC3E40001ADA3 /* UserDefaultsCartStorage.swift */; };
+		B31010BD260CC58A0001ADA3 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31010BC260CC58A0001ADA3 /* CartManager.swift */; };
+		B31010C2260CC7A50001ADA3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31010C1260CC7A50001ADA3 /* CartViewController.swift */; };
+		B31010C7260CCD170001ADA3 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31010C6260CCD160001ADA3 /* Order.storyboard */; };
+		B31010CC260CCD500001ADA3 /* CommerceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31010CB260CCD500001ADA3 /* CommerceOrderViewController.swift */; };
+		B31010DA260CE7D70001ADA3 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31010D9260CE7D70001ADA3 /* OrderDetail.swift */; };
+		B31010DF260CEFFD0001ADA3 /* PaypalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31010DE260CEFFC0001ADA3 /* PaypalViewController.swift */; };
 		B3214FDF25FD2267009791F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3214FDE25FD2267009791F3 /* AppDelegate.swift */; };
 		B3214FE125FD2267009791F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3214FE025FD2267009791F3 /* SceneDelegate.swift */; };
 		B3214FE625FD2267009791F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3214FE425FD2267009791F3 /* Main.storyboard */; };
@@ -111,6 +118,13 @@
 		B3101098260A70110001ADA3 /* ProductDetailImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		B310109E260A70330001ADA3 /* ProductDetailSuggestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailSuggestedCollectionViewCell.swift; sourceTree = "<group>"; };
 		B310109F260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailSuggestedCollectionViewCell.xib; sourceTree = "<group>"; };
+		B31010B4260CC3E40001ADA3 /* UserDefaultsCartStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsCartStorage.swift; sourceTree = "<group>"; };
+		B31010BC260CC58A0001ADA3 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		B31010C1260CC7A50001ADA3 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		B31010C6260CCD160001ADA3 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		B31010CB260CCD500001ADA3 /* CommerceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceOrderViewController.swift; sourceTree = "<group>"; };
+		B31010D9260CE7D70001ADA3 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
+		B31010DE260CEFFC0001ADA3 /* PaypalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalViewController.swift; sourceTree = "<group>"; };
 		B3214FDB25FD2267009791F3 /* Enkor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enkor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3214FDE25FD2267009791F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3214FE025FD2267009791F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,13 +233,13 @@
 		B310106E260A47150001ADA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3214FE725FD2268009791F3 /* Assets.xcassets */,
 				B369F82425FE86900030E013 /* AppConfigure.swift */,
 				B3214FDE25FD2267009791F3 /* AppDelegate.swift */,
 				B3214FE025FD2267009791F3 /* SceneDelegate.swift */,
-				B3214FE725FD2268009791F3 /* Assets.xcassets */,
-				B3214FEC25FD2268009791F3 /* Info.plist */,
 				B369F8ED26011B740030E013 /* Debug.xcconfig */,
 				B369F8EE26011BA50030E013 /* Release.xcconfig */,
+				B3214FEC25FD2268009791F3 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -238,6 +252,9 @@
 				B369F99E2605EF1F0030E013 /* HomeViewController.swift */,
 				B369F7D425FE55FC0030E013 /* MyPageViewController.swift */,
 				B369F7F925FE6F4F0030E013 /* LoginSessionViewController.swift */,
+				B31010C1260CC7A50001ADA3 /* CartViewController.swift */,
+				B31010CB260CCD500001ADA3 /* CommerceOrderViewController.swift */,
+				B31010DE260CEFFC0001ADA3 /* PaypalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				B369F86525FE92B60030E013 /* AuthManager.swift */,
+				B31010BC260CC58A0001ADA3 /* CartManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -421,6 +439,7 @@
 				B3101075260A48B60001ADA3 /* Cart.storyboard */,
 				B369F7C725FE455A0030E013 /* MyPage.storyboard */,
 				B369F7E825FE67F80030E013 /* Auth.storyboard */,
+				B31010C6260CCD160001ADA3 /* Order.storyboard */,
 				B369F9422603A8D30030E013 /* Market */,
 				B321502825FE000A009791F3 /* Home */,
 				B3101074260A48960001ADA3 /* Cart */,
@@ -472,6 +491,7 @@
 				B369F8B02600FE7B0030E013 /* UserDefaultsProfileStorage.swift */,
 				B369F8B52600FE8F0030E013 /* DeviceTokenStorage.swift */,
 				B369F901260191250030E013 /* TokenStorage.swift */,
+				B31010B4260CC3E40001ADA3 /* UserDefaultsCartStorage.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -498,6 +518,7 @@
 				B369F9602605E2720030E013 /* ProductOption.swift */,
 				B369F9652605E2850030E013 /* ProductImage.swift */,
 				B369F96A2605E29C0030E013 /* ProductCategory.swift */,
+				B31010D9260CE7D70001ADA3 /* OrderDetail.swift */,
 			);
 			path = Market;
 			sourceTree = "<group>";
@@ -642,6 +663,7 @@
 				B369F7C825FE455A0030E013 /* MyPage.storyboard in Resources */,
 				B369F9512605DBD30030E013 /* ProductCollectionViewCell.xib in Resources */,
 				B3214FE825FD2268009791F3 /* Assets.xcassets in Resources */,
+				B31010C7260CCD170001ADA3 /* Order.storyboard in Resources */,
 				B3101076260A48B60001ADA3 /* Cart.storyboard in Resources */,
 				B369F87B2600EB390030E013 /* MyPageTableViewCell.xib in Resources */,
 				B369F94A2603AB600030E013 /* Market.storyboard in Resources */,
@@ -794,8 +816,10 @@
 				B369F8C92601018D0030E013 /* Notification+.swift in Sources */,
 				B369F9612605E2720030E013 /* ProductOption.swift in Sources */,
 				B369F8A92600FE6F0030E013 /* Storage.swift in Sources */,
+				B31010BD260CC58A0001ADA3 /* CartManager.swift in Sources */,
 				B310106A260923E60001ADA3 /* ProductDetailViewController.swift in Sources */,
 				B369F9842605E7B20030E013 /* ProductViewModel.swift in Sources */,
+				B31010DA260CE7D70001ADA3 /* OrderDetail.swift in Sources */,
 				B31010512608F0EC0001ADA3 /* CategoryItemCollectionViewCell.swift in Sources */,
 				B369F9792605E30E0030E013 /* ProductAPI.swift in Sources */,
 				B369F96B2605E29C0030E013 /* ProductCategory.swift in Sources */,
@@ -803,16 +827,19 @@
 				B369F934260389F70030E013 /* ErrorHandling.swift in Sources */,
 				B369F7FF25FE73970030E013 /* LoginSessionViewModel.swift in Sources */,
 				B369F8C42600FFBE0030E013 /* DictionaryConvertable.swift in Sources */,
+				B31010DF260CEFFD0001ADA3 /* PaypalViewController.swift in Sources */,
 				B369F8B62600FE8F0030E013 /* DeviceTokenStorage.swift in Sources */,
 				B3F6034526067BF0007CC98A /* UIView+.swift in Sources */,
 				B369F86625FE92B60030E013 /* AuthManager.swift in Sources */,
 				B369F97E2605E31C0030E013 /* ProductAPIParser.swift in Sources */,
 				B369F87A2600EB390030E013 /* MyPageTableViewCell.swift in Sources */,
 				B3214FDF25FD2267009791F3 /* AppDelegate.swift in Sources */,
+				B31010C2260CC7A50001ADA3 /* CartViewController.swift in Sources */,
 				B369F9662605E2850030E013 /* ProductImage.swift in Sources */,
 				B31010A0260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.swift in Sources */,
 				B369F99A2605ECDA0030E013 /* ImageLoader.swift in Sources */,
 				B369F8DC26010E410030E013 /* NibLoadableUIView.swift in Sources */,
+				B31010CC260CCD500001ADA3 /* CommerceOrderViewController.swift in Sources */,
 				B3214FE125FD2267009791F3 /* SceneDelegate.swift in Sources */,
 				B369F81225FE80320030E013 /* UserService.swift in Sources */,
 				B369F86125FE90120030E013 /* BaseServerAPI.swift in Sources */,
@@ -821,6 +848,7 @@
 				B369F82525FE86900030E013 /* AppConfigure.swift in Sources */,
 				B369F9712605E3050030E013 /* ProductService.swift in Sources */,
 				B369F7E325FE65440030E013 /* Storyboard.swift in Sources */,
+				B31010B5260CC3E40001ADA3 /* UserDefaultsCartStorage.swift in Sources */,
 				B369F7FA25FE6F4F0030E013 /* LoginSessionViewController.swift in Sources */,
 				B3101099260A70110001ADA3 /* ProductDetailImageCollectionViewCell.swift in Sources */,
 				B369F85C25FE8D0C0030E013 /* JSONModelConverter.swift in Sources */,

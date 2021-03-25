@@ -18,12 +18,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="xJe-5f-enw" kind="relationship" relationship="viewControllers" id="dzD-Aj-GnQ"/>
+                        <segue destination="nnn-Nz-7hp" kind="relationship" relationship="viewControllers" id="xIK-UN-GMQ"/>
                         <segue destination="HTZ-4q-Sww" kind="relationship" relationship="viewControllers" id="6wV-WZ-93u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwz-9x-CNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="288"/>
+            <point key="canvasLocation" x="-648" y="232"/>
         </scene>
         <!--Home-->
         <scene sceneID="UQg-4F-2jB">
@@ -33,7 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahr-h9-x5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="123"/>
+            <point key="canvasLocation" x="142" y="66"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="QLG-Rv-e17">
@@ -43,7 +44,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98r-h0-pPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="179"/>
+            <point key="canvasLocation" x="133" y="232"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="UX3-hQ-EZT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" referencedIdentifier="Cart" id="nnn-Nz-7hp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Pva-ik-jXW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRo-aP-gwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="149"/>
         </scene>
     </scenes>
 </document>
