@@ -1,0 +1,19 @@
+//
+//  Debug.xcconfig
+//  Enkor
+//
+//  Created by Seong Moon Jo on 2021/03/17.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Enkor/Pods-Enkor.debug.xcconfig"
+APP_NAME = Enkor Dev
+BASE_URL = https:\/\/dev.enkor.kr
+APP_VERSION = 0.0.0
+BUILD_PHASE = Debug
+//AWS_COGNITO_POOL_ID = ap-northeast-2:cdaea5ef-3c64-4ec5-8485-816a3e2d0c41
+//AWS_BUCKET_NAME = devimg-pickit-seoul
+//AWS_REGION = Regions.AP_NORTHEAST_2
+//AWS_BASE_IMG_URL = https:\/\/devimg.pickit.co.kr
