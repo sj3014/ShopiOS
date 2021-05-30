@@ -24,33 +24,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B3-B6-fEC" userLabel="email">
-                                            <rect key="frame" x="40" y="40" width="44.5" height="21"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9a-l5-rPY">
+                                            <rect key="frame" x="10" y="10" width="394" height="180"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B3-B6-fEC" userLabel="email">
+                                            <rect key="frame" x="40" y="40" width="4" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ph-PT-lwD" userLabel="firstName">
-                                            <rect key="frame" x="40" y="81" width="44.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ph-PT-lwD" userLabel="firstName">
+                                            <rect key="frame" x="40" y="81" width="113.5" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRX-Ue-c0g" userLabel="lastName">
-                                            <rect key="frame" x="40" y="122" width="44.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRX-Ue-c0g" userLabel="lastName">
+                                            <rect key="frame" x="40" y="122" width="4" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="yRX-Ue-c0g" firstAttribute="leading" secondItem="Ai7-jO-Iuu" secondAttribute="leading" constant="40" id="1xQ-V3-l1C"/>
                                         <constraint firstItem="3Ph-PT-lwD" firstAttribute="top" secondItem="8B3-B6-fEC" secondAttribute="bottom" constant="20" id="9mt-Al-8Za"/>
                                         <constraint firstItem="8B3-B6-fEC" firstAttribute="leading" secondItem="Ai7-jO-Iuu" secondAttribute="leading" constant="40" id="BKM-F3-gOf"/>
                                         <constraint firstItem="8B3-B6-fEC" firstAttribute="top" secondItem="Ai7-jO-Iuu" secondAttribute="top" constant="40" id="BOP-RK-b7d"/>
+                                        <constraint firstAttribute="bottom" secondItem="b9a-l5-rPY" secondAttribute="bottom" constant="10" id="PHc-81-xJv"/>
                                         <constraint firstItem="3Ph-PT-lwD" firstAttribute="leading" secondItem="Ai7-jO-Iuu" secondAttribute="leading" constant="40" id="Pzd-6S-JpF"/>
+                                        <constraint firstItem="b9a-l5-rPY" firstAttribute="leading" secondItem="Ai7-jO-Iuu" secondAttribute="leading" constant="10" id="VlK-tF-qFc"/>
                                         <constraint firstItem="yRX-Ue-c0g" firstAttribute="top" secondItem="3Ph-PT-lwD" secondAttribute="bottom" constant="20" id="mYJ-pa-Sj1"/>
+                                        <constraint firstItem="b9a-l5-rPY" firstAttribute="top" secondItem="Ai7-jO-Iuu" secondAttribute="top" constant="10" id="q8W-jz-Jwo"/>
+                                        <constraint firstAttribute="trailing" secondItem="b9a-l5-rPY" secondAttribute="trailing" constant="10" id="xhb-aq-PSa"/>
                                     </constraints>
                                 </view>
                             </tableView>
@@ -82,9 +90,6 @@
         <image name="sign in" width="30" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

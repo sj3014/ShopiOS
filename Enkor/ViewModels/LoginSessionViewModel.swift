@@ -27,10 +27,9 @@ class LoginSessionViewModel: ErrorHandling {
             .login(email: email, password: password)
             .flatMap({ json in AuthManager.sharedInstance.parseTokenAndSave(json: json) })
             .subscribe(onNext: { [weak self] _ in
-                print("SUCCESS")
                 self?.loginFinished.onNext(())
             }, onError: { [weak self] error in
-                print(error)
+                print("Error", error)
                 self?.handleServerError(error)
             }).disposed(by: disposeBag)
     }

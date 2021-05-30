@@ -77,6 +77,10 @@
 		B369F9842605E7B20030E013 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369F9832605E7B20030E013 /* ProductViewModel.swift */; };
 		B369F99A2605ECDA0030E013 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369F9992605ECDA0030E013 /* ImageLoader.swift */; };
 		B369F99F2605EF1F0030E013 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369F99E2605EF1F0030E013 /* HomeViewController.swift */; };
+		B3C6CF87260DBBEC00367AB2 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6CF86260DBBEC00367AB2 /* Datum.swift */; };
+		B3C6CF8C260DBC0900367AB2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6CF8B260DBC0900367AB2 /* Profile.swift */; };
+		B3C6CF9B26106ABF00367AB2 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6CF9926106ABF00367AB2 /* CarouselCollectionViewCell.swift */; };
+		B3C6CF9C26106ABF00367AB2 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C6CF9A26106ABF00367AB2 /* CarouselCollectionViewCell.xib */; };
 		B3F6034526067BF0007CC98A /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6034426067BF0007CC98A /* UIView+.swift */; };
 		B7EB6B61753A658C64339B90 /* Pods_Enkor_EnkorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8E8E2AB747B721F195C312 /* Pods_Enkor_EnkorUITests.framework */; };
 		C263A0D727BAADCE09C6C830 /* Pods_Enkor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE61E68674063268D47E8AFA /* Pods_Enkor.framework */; };
@@ -184,6 +188,10 @@
 		B369F9832605E7B20030E013 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		B369F9992605ECDA0030E013 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B369F99E2605EF1F0030E013 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B3C6CF86260DBBEC00367AB2 /* Datum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
+		B3C6CF8B260DBC0900367AB2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		B3C6CF9926106ABF00367AB2 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3C6CF9A26106ABF00367AB2 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3F6034426067BF0007CC98A /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		E0FBDA64BCC49DDC6A3EDC5E /* Pods-Enkor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enkor.release.xcconfig"; path = "Target Support Files/Pods-Enkor/Pods-Enkor.release.xcconfig"; sourceTree = "<group>"; };
 		FE61E68674063268D47E8AFA /* Pods_Enkor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enkor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +298,8 @@
 				B3101098260A70110001ADA3 /* ProductDetailImageCollectionViewCell.xib */,
 				B310109E260A70330001ADA3 /* ProductDetailSuggestedCollectionViewCell.swift */,
 				B310109F260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.xib */,
+				B3C6CF9926106ABF00367AB2 /* CarouselCollectionViewCell.swift */,
+				B3C6CF9A26106ABF00367AB2 /* CarouselCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,6 +369,7 @@
 				B369F95A2605E23E0030E013 /* Market */,
 				B369F8BA2600FEFC0030E013 /* User */,
 				B369F8C32600FFBE0030E013 /* DictionaryConvertable.swift */,
+				B3C6CF86260DBBEC00367AB2 /* Datum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -500,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				B369F92626037FE90030E013 /* UserProfile.swift */,
+				B3C6CF8B260DBC0900367AB2 /* Profile.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -662,6 +674,7 @@
 				B31010A1260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.xib in Resources */,
 				B369F7C825FE455A0030E013 /* MyPage.storyboard in Resources */,
 				B369F9512605DBD30030E013 /* ProductCollectionViewCell.xib in Resources */,
+				B3C6CF9C26106ABF00367AB2 /* CarouselCollectionViewCell.xib in Resources */,
 				B3214FE825FD2268009791F3 /* Assets.xcassets in Resources */,
 				B31010C7260CCD170001ADA3 /* Order.storyboard in Resources */,
 				B3101076260A48B60001ADA3 /* Cart.storyboard in Resources */,
@@ -800,6 +813,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C6CF9B26106ABF00367AB2 /* CarouselCollectionViewCell.swift in Sources */,
 				B369F81F25FE804A0030E013 /* UserAPIParser.swift in Sources */,
 				B369F902260191250030E013 /* TokenStorage.swift in Sources */,
 				B369F7D525FE55FC0030E013 /* MyPageViewController.swift in Sources */,
@@ -835,11 +849,13 @@
 				B369F87A2600EB390030E013 /* MyPageTableViewCell.swift in Sources */,
 				B3214FDF25FD2267009791F3 /* AppDelegate.swift in Sources */,
 				B31010C2260CC7A50001ADA3 /* CartViewController.swift in Sources */,
+				B3C6CF87260DBBEC00367AB2 /* Datum.swift in Sources */,
 				B369F9662605E2850030E013 /* ProductImage.swift in Sources */,
 				B31010A0260A70340001ADA3 /* ProductDetailSuggestedCollectionViewCell.swift in Sources */,
 				B369F99A2605ECDA0030E013 /* ImageLoader.swift in Sources */,
 				B369F8DC26010E410030E013 /* NibLoadableUIView.swift in Sources */,
 				B31010CC260CCD500001ADA3 /* CommerceOrderViewController.swift in Sources */,
+				B3C6CF8C260DBC0900367AB2 /* Profile.swift in Sources */,
 				B3214FE125FD2267009791F3 /* SceneDelegate.swift in Sources */,
 				B369F81225FE80320030E013 /* UserService.swift in Sources */,
 				B369F86125FE90120030E013 /* BaseServerAPI.swift in Sources */,

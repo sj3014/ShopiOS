@@ -8,6 +8,7 @@
 import Foundation
 
 class UserDefaultsProfileStorage: Storage {
+    
     typealias Item = UserProfile
     private let key = "currentUser"
     

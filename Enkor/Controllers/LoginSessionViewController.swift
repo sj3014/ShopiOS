@@ -41,6 +41,13 @@ class LoginSessionViewController: ReactiveViewController, ErrorDisplayable {
                 self.dismiss(animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
+        viewModel
+            .fetchedUserProfile
+            .subscribe(onNext: {
+                AuthManager.sharedInstance.didChangeLoginState.onNext(.login)
+                self.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
     
     
@@ -59,10 +66,7 @@ class LoginSessionViewController: ReactiveViewController, ErrorDisplayable {
 //            UIAlertController.displayAlert(title: nil, message: "validation_password".localized(), presenter: self)
 //            return
 //        }
-        
-
         viewModel.login(email: emailEntry, password: passwordEntry)
-
     }
     
 }

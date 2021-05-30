@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserProfile : Codable {
+struct Profile : Codable {
 
         let authProvider : String?
         let countryID : Int?

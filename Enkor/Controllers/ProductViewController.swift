@@ -42,6 +42,8 @@ class ProductViewController: ReactiveViewController, ErrorDisplayable {
         categoryItemCollectionView.register(CategoryItemCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryItemCollectionViewCell.identifier)
         categoryItemCollectionView.delegate = self
         categoryItemCollectionView.dataSource = self
+        let indexPath = IndexPath(item: 0, section: 0)
+        categoryItemCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .init())
         
         categoryCollectionView.register(CategoryCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         categoryCollectionView.delegate = self

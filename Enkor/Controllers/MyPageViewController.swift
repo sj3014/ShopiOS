@@ -51,9 +51,9 @@ class MyPageViewController: UIViewController {
                         
                     }
                 } else {
-                    self?.firstName.text = ""
-                    self?.lastName.text = ""
-                    self?.email.text = ""
+                    self?.firstName.text = "Please Login"
+                    self?.lastName.text = " "
+                    self?.email.text = " "
                 }
             })
             .disposed(by: disposeBag)
@@ -90,7 +90,16 @@ extension MyPageViewController: UITableViewDelegate {
         case .login:
             proceedLogin()
         case .logout:
-            proceedLogout()
+            guard AuthManager.sharedInstance.isSignedIn else { return }
+            let alertController = UIAlertController(title: nil,
+                                                    message: "Would you like to sign out of Enkor?",
+                                                    preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "confirm",
+                                                    style: .default) { _ in
+                self.proceedLogout()
+            })
+            alertController.addAction(UIAlertAction(title: "cancel", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         case .signup:
             proceedSignup()
         case .order:

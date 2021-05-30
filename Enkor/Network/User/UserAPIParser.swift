@@ -20,9 +20,9 @@ class UserAPIParser: JSONParser {
     
     func parseProfile() throws -> UserProfile {
         guard let profile = JSONModelConverter.decode(type: UserProfile.self, json: json["data"]["profile"]) else {
+            print("ErrorWhileParsing")
             throw UserAPIParseError.noUser
         }
-        
         return profile
     }
 }

@@ -18,7 +18,7 @@ extension UserService: TargetType, AccessTokenAuthorizable {
     var path: String {
         switch self {
         case .login:
-            return "/auth/c/loginTest"
+            return "/auth/c/appLogin"
         case .signup:
             return "/auth/c/register"
         case .getProfile:
